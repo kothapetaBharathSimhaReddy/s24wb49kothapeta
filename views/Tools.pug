@@ -2,3 +2,16 @@ extends layout
 
 block content
   h1= title
+  -
+  .container-fluid
+  .row
+    - let results = [{ usage: "Woodworking", name: "Drill Machine", price: 49.99 },{ usage: "Plumbing", name: "Screwdriver Set", price: 29.99 },{ usage: "Gardening", name: "Pruning Shears", price: 19.99 }]
+      - results.forEach(function(item) {
+        .col-sm-2
+          div
+            p Usage: #{item.usage}
+            p Name: #{item.name}
+            p Price: #{item.price}
+      - })
+
+      
